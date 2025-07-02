@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .container{
+                width: 100vw;
+                height: 100vh;
+                background-color: aquamarine;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .card{
+                width: 220px;
+                height: 350px;
+                background-color: white;
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between
+            }
+            #image img{
+                width: 220px;
+                height: 100px;
+                border-radius: 15px 15px 0 0;
+            }
+            #head h2{
+                font-size: medium;
+            }
+            #para{
+                font-size: small;
+                text-align: center;
+                padding: 0 20px;
+            }
+            .banner{
+                width: 75%;
+                height: 30px;
+                background-color: lightskyblue;
+                border-radius: 6px;
+                display: flex;
+            }
+            #logo img{
+                width: 30px;
+                height: 30px;
+            }
+            #text{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-left: 15px;
+            }
+            #text p{
+                font-size: 9px;
+            }
+            #link{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                transition: all 0.3s ease;
+                margin-left: 35px
+            }
+            #link:hover{
+                transform: scale(1.1);
+                text-decoration: underline
+            }
+            #link a{
+                text-align: center;
+                text-decoration: none;
+                color: black;
+                font-size: 9px;
+                font-weight: bold;
+            }
+            #payment{
+                width: 75%;
+                height: 25px;
+                background-color:darkblue;
+                border-radius: 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: box-shadow 0.3s ease, transform 0.3s ease;
+            }
+            #payment:hover{
+                box-shadow: 0 5px 20px black;
+                transform: translateY(-3px);
+            }
+            #payment a{
+                font-size: 9px;
+                color: white;
+                text-decoration: none;
+            }
+            #last{
+                margin-bottom: 15px;
+                transition: all 0.3s ease;
+            }
+            #last:hover{
+                transform: scale(1.08);
+                text-decoration: underline;
+            }
+            #last a{
+                text-decoration: none;
+                color: black;
+                font-size: 10px;
+                font-weight: bold;
+            }
+
+            @media (max-width: 250px) {
+                .card {
+                    width: 95vw;
+                    height: auto;
+                }
+                #image img {
+                    width: 100%;
+                    height: auto;
+                }
+                .banner, #payment {
+                    width: 95vw;
+                    flex-direction: column;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <!-- this is the whole page -->
+        <div class="container">
+            <!-- this is the card -->
+            <div class="card">
+
+                <!-- this is the top image displayed in the card -->
+                <div id="image">
+                    <img src="icon.jpg" alt="Icon">
+                </div>
+                <!-- heading under the image -->
+                <div id="head">
+                    <h2>Order Summary</h2>
+                </div>
+                <!-- paragraph under the heading -->
+                <div id="para">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, rem a. Ex porro facilis qui?
+                </div>
+                <!-- this is the banner showing the plan details -->
+                <div class="banner">
+                    <!-- this is the left most logo inside the banner -->
+                    <div id="logo">
+                        <img src="music.png" alt="Music">
+                    </div>
+                    <!-- this is the text inside the banner -->
+                    <div id="text">
+                        <p>Annual Plan</p>
+                        <p>$99.9/year</p>
+                    </div>
+                    <!-- this is the right most anchor tag inside the banner -->
+                    <div id="link">
+                        <a href="#">Change</a>
+                    </div>
+                </div>
+                <!-- this is the another paragraph under the banner -->
+                <div id="payment">
+                    <a href="#">Proceed to Payment</a>
+                </div>
+                <!-- cancel order tag last element in the card -->
+                <div id="last">
+                    <a href="#">Cancel Order</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>
